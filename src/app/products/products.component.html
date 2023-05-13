@@ -1,0 +1,9 @@
+
+
+<div *ngFor="let product of products1" class="card">
+    <img [src]="product.imageUrl" alt="Denim Jeans" style="width:90%;padding-top: 20px;">
+    <h1>{{product.title}}</h1>
+    <p class="price">{{product.price}}</p>
+    <p><button>Add to Cart</button></p>
+  </div>
+  
