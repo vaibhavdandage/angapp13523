@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: angapp1-app
-          image: ang-app
+          image: angapp1
           imagePullPolicy: Never
           ports:
             - containerPort: 80
