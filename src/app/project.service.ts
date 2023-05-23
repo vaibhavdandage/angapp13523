@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProjectService {
 
   constructor(private http:HttpClient) { }
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'http://localhost:8081';
 
   getProducts(){
     return this.http.get(`${this.baseUrl}`+'/products');
@@ -15,7 +15,7 @@ export class ProjectService {
 
   login(user:UserLogin){
     console.log(user);
-    return this.http.post(`${this.baseUrl}`+'/login',user);
+    return this.http.post(`${this.baseUrl}`+'/authenticate',user);
   }
 
   register(user:UserLogin){
