@@ -32,7 +32,10 @@ export class LoginComponent implements OnInit {
       console.log(data);
       var data1 = <any>data;
       this.user = data1.object;
-      if(this.user==null){
+      localStorage.setItem('access_token', data1.token);
+
+      console.log(localStorage.getItem('access_token'));
+      if(localStorage.getItem('access_token')==null){
         this.router.navigate(['register']);
        }
        else{
