@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     this.service.login(this.loginForm.value).subscribe((data)=>{
-      console.warn(this.loginForm.value);
+      //console.warn(this.loginForm.value);
       console.log(data);
       var data1 = <any>data;
       this.user = data1.object;
@@ -39,10 +39,12 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['register']);
        }
        else{
+
         this.router.navigate(['home/products']);
+
        }
-      console.log(this.user);
-      console.log(data1.object[0]);
+      //console.log(this.user);
+      //console.log(data1.object[0]);
   
      });
      

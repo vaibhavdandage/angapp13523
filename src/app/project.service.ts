@@ -8,15 +8,15 @@ import {HttpClient, HttpHeaders,  HttpErrorResponse} from '@angular/common/http'
 })
 export class ProjectService {
 
-  endpoint: string = 'http://localhost:8081';
-  headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin','http://localhost:4300/');
-
-
+  
+  headers = new HttpHeaders().set('Authorization','Bearer '+ localStorage.getItem('access_token'));
   constructor(private http:HttpClient) { }
-  private baseUrl = 'http://localhost:8081';
+  private baseUrl = 'http://localhost:8080';
+
 
   getProducts(){
-    return this.http.get(`${this.baseUrl}`+'/products');
+    console.log('in get products');
+    return this.http.get(`${this.baseUrl}`+'/products',{ headers: this.headers });
   }
 
   login(user:UserLogin){
