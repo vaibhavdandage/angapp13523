@@ -9,7 +9,7 @@
     <div class="header">
       <h2>Header</h2>
     </div>
-    
+  
     <div class="row">
     
       <div class="column middle" style="background-color:#fbf9f9;">
@@ -23,8 +23,11 @@
           <label for="password" class="control-label">Password</label>
           <input type="password" id="password" class="form-control" formControlName="password">
   
-    
-      <input type="submit" value="Submit" class="btn btn-primary" [disabled]="!loginForm.valid">
+          <re-captcha formControlName="recaptchaReactive" (resolved)="checkCaptcha($event)" siteKey="6LcmrkQmAAAAAF9YPn1qsapLew7u-8ZtcsxCuHy1">
+          </re-captcha>
+
+
+      <input type="submit"  value="Submit" class="btn btn-primary" [disabled]="!loginForm.valid" [disabled]="!captchaResolved">
        
     
     </form>
@@ -32,4 +35,7 @@
       
     </div>
     
-  
+    
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "small" color = "#fff" type = "square-jelly-box" [fullScreen] = "false">
+      <p style="color: white" > Loading... </p>
+</ngx-spinner>

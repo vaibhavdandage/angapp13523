@@ -16,7 +16,14 @@ export class ProjectService {
 
   getProducts(){
     console.log('in get products');
+    console.log(localStorage.getItem('access_token'));
     return this.http.get(`${this.baseUrl}`+'/products',{ headers: this.headers });
+  }
+
+  getStock(){
+    console.log('in get stock');
+    console.log(localStorage.getItem('access_token'));
+    return this.http.get(`${this.baseUrl}`+'/stock',{ headers: this.headers });
   }
 
   login(user:UserLogin){
@@ -27,8 +34,14 @@ export class ProjectService {
   register(user:UserLogin){
     return this.http.post(`${this.baseUrl}`+'/register',user);
   }
+
+  message(message:Message){
+    return this.http.post(`${this.baseUrl}`+'/message',message);
+  }
 }
 
-class UserLogin{
+class UserLogin{}
 
-}
+class Message{}
+
+class Stock{}

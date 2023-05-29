@@ -12,6 +12,7 @@ ul {
   }
   
   li:last-child {
+    float: right;
     border-right: none;
   }
   
@@ -100,3 +101,4 @@ body {
     width: 100%;
   }
 }
+
