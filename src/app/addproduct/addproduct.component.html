@@ -1,1 +1,37 @@
-<p>addproduct works!</p>
+
+  
+
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <!-- Title input -->
+    <div class="form-outline mb-4">
+      <input type="text"  class="form-control" formControlName="title" />
+      <label class="form-label" for="form4Example1">Title</label>
+    </div>
+  
+    <!-- Image input -->
+    <div class="form-outline mb-4">
+      <input type="email"  class="form-control" formControlName="imageUrl" />
+      <label class="form-label" for="form4Example2">Image URL</label>
+    </div>
+  
+    <!-- Price input -->
+    <div class="form-outline mb-4">
+      <textarea  class="form-control" formControlName="price"></textarea>
+      <label class="form-label" for="form4Example3">Unit Price</label>
+    </div>
+
+     <!-- Shipping charges input -->
+     <div class="form-outline mb-4">
+        <textarea  class="form-control" formControlName="shippingCharges"></textarea>
+        <label class="form-label" for="form4Example3">Shipping Charges</label>
+      </div>
+    
+    <!-- Submit button -->
+    <input type="submit"  value="Submit" class="btn btn-primary" [disabled]="!productForm.valid">
+  </form>
+
+  
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "small" color = "#fff" type = "square-jelly-box" [fullScreen] = "false">
+    <p style="color: white" > Loading... </p>
+</ngx-spinner>

@@ -30,6 +30,7 @@ export class ContactComponent {
 
   onSubmit(){
 
+    console.log(this.messageForm.value);
     this.showSpinner();
     this.service.message(this.messageForm.value).subscribe((data)=>{
       console.warn(this.messageForm.value);
@@ -44,7 +45,7 @@ export class ContactComponent {
        }
        else{
 
-        this.router.navigate(['message']);
+        this.router.navigate(['home']);
 
        }
       //console.log(this.user);

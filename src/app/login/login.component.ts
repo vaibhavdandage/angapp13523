@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   form!: FormGroup;
   typeSelected!: string;
-  public captchaResolved : boolean = false;
+  public captchaResolved : boolean = true;
 
 
   constructor(private formBuilder: FormBuilder,private service:ProjectService,private router: Router,private spinnerService: NgxSpinnerService) { }
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
        }
        else{
 
-        this.router.navigate(['home/products']);
+        this.router.navigate(['home']);
 
        }
       //console.log(this.user);

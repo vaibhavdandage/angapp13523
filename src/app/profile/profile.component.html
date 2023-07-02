@@ -1,1 +1,34 @@
-<p>profile works!</p>
+<div class="container mt-3">
+    <h2>Bordered Table</h2>
+    <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>            
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>
+            <div class="card">
+            <img [src]="profile.imageUrl" alt="Denim Jeans" style="width:90%;padding-top: 20px;">
+            <h1>{{profile.name}}</h1>
+            <p class="price">{{profile.dob}}</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
