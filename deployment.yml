@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: angapp1
+  name: angapp3723
 spec:
   selector:
     matchLabels:
-      app: angapp1
+      app: angapp3723
   replicas: 1
   template:
     metadata:
       labels:
-        app: angapp1
+        app: angapp3723
     spec:
       containers:
-        - name: angapp1-app
-          image: ang-app
+        - name: angapp3723-app
+          image: docker.io/library/angapp3723_3:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 80

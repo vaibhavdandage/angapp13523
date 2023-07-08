@@ -17,7 +17,8 @@ export class ProjectService {
             ;
   constructor(private http:HttpClient) { }
   //private baseUrl = 'http://ec2-43-205-129-153.ap-south-1.compute.amazonaws.com:8080';
-  private baseUrl = 'http://3.109.139.61:8080';
+  //private baseUrl = 'http://3.109.139.61:8080';
+  private baseUrl = 'http://localhost:8080';
 
   getProducts(){
     console.log('in get products');
