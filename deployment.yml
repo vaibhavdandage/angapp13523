@@ -17,4 +17,4 @@ spec:
           image: ang-app
           imagePullPolicy: Never
           ports:
-            - containerPort: 80
+            - containerPort: 90
